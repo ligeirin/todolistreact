@@ -50,13 +50,13 @@ export default function Home() {
       service.create({ content, urgency }).then((created) => {
         update();
       });
-      showAlert("success", "Afazer registrado com sucesso");
+      showAlert("success", "To-Do registered successfully");
     } else {
       service.update(editingID, { content, urgency }).then((updated) => {
         update();
       });
       setEditingID("");
-      showAlert("warning", "Afazer atualizado com sucesso");
+      showAlert("warning", "To-Do updated successfully");
     }
 
     setContent("");
@@ -67,7 +67,7 @@ export default function Home() {
     service.delete(id).then((deleted) => {
       update();
     });
-    showAlert("danger", "Afazer removido com sucesso");
+    showAlert("danger", "To-Do deleted successfully");
   }
 
   function handleEdit(id: string) {

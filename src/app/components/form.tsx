@@ -19,7 +19,7 @@ export default function ToDoForm({
               type="text"
               onChange={contentChange}
               value={content}
-              placeholder="Afazer"
+              placeholder="To-Do"
             ></Form.Control>
           </Form.Group>
         </Col>
@@ -27,11 +27,11 @@ export default function ToDoForm({
           <Form.Group className="mb-3">
             <Form.Select onChange={urgencyChange} value={urgency}>
               <option value={0} disabled>
-                Urgência
+                Urgency
               </option>
-              <option value={1}>Baixa</option>
-              <option value={2}>Média</option>
-              <option value={3}>Alta</option>
+              <option value={1}>Low</option>
+              <option value={2}>Medium</option>
+              <option value={3}>High</option>
             </Form.Select>
           </Form.Group>
         </Col>
