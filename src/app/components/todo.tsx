@@ -22,13 +22,13 @@ export default function ToDo({
   function evaluateUrgency(u: any): {
     bg: "success" | "warning" | "danger";
     text: "dark" | "light";
-    content: "Baixa" | "Média" | "Alta";
+    content: "Low" | "Medium" | "High";
   } {
     return u == 1
-      ? { bg: "success", text: "light", content: "Baixa" }
+      ? { bg: "success", text: "light", content: "Low" }
       : u == 2
-      ? { bg: "warning", text: "dark", content: "Média" }
-      : { bg: "danger", text: "light", content: "Alta" };
+      ? { bg: "warning", text: "dark", content: "Medium" }
+      : { bg: "danger", text: "light", content: "High" };
   }
 
   return (
@@ -38,7 +38,7 @@ export default function ToDo({
           bg={evaluateUrgency(urgency).bg}
           text={evaluateUrgency(urgency).text}
         >
-          Urgência {evaluateUrgency(urgency).content}
+          Urgency {evaluateUrgency(urgency).content}
         </Badge>
       </Card.Header>
       <Card.Body>
